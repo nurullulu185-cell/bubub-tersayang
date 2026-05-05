@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Bbub!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #3e8abd; /* Hitam Aesthetic */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            /* Efek Kelap Kelip */
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff4d4d, 0 0 40px #ff4d4d;
+            }
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4d4d, 0 0 40px #ff4d4d, 0 0 50px #ff4d4d, 0 0 60px #ff4d4d;
+            }
+        }
+
+        .pesan {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+            color: #ccc;
+            animation: fadeIn 3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .highlight {
+            color: #ff4d4d;
+            font-weight: bold;
+        }
+
+        /* Kelap kelip bintang di background */
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: twinkle var(--duration) infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Partikel Bintang Kelap Kelip -->
+    <script>
+        for (let i = 0; i < 100; i++) {
+            let star = document.createElement('div');
+            star.className = 'star';
+            let size = Math.random() * 3 + 'px';
+            star.style.width = size;
+            star.style.height = size;
+            star.style.top = Math.random() * 100 + 'vh';
+            star.style.left = Math.random() * 100 + 'vw';
+            star.style.setProperty('--duration', Math.random() * 3 + 2 + 's');
+            document.body.appendChild(star);
+        }
+    </script>
+
+    <div class="container">
+        <h1>Happy Birthday, Bbub Tersayang!</h1>
+        <div class="pesan">
+            <p>Aku bangga banget sama kamu. Makasih ya sudah bertahan bareng aku selama 3 tahun ini.</p>
+            <p>Maafin aku yang sempat mau menyerah, tapi makasih kamu nggak ngelepas aku. <br>
+            <span class="highlight">"Usahakan aku terus ya, sampai kita pulang ke rumah yang sama."</span></p>
+            <p>Semoga tahun-tahun berikutnya tetap aku yang ngucapin dan doain kamu.</p>
+            <p>Dari Lulu Nurul Auliya❤️</p>
+        </div>
+    </div>
+
+</body>
+</html>
